@@ -1,0 +1,22 @@
+{% extends "chatterApp/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+
+<div class="container">
+    <link rel="stylesheet" href="{% static "index.css" %}">
+    <div class="jumbotron big-banner">
+
+        <br>
+        {% if user.is_authenticated %}
+            <h2>Welcome to Chungus Chat, <b>{{ user.username }}</b></h2>
+            <h1>You can start chhhhhhattting!!!</h1>
+        {% else %}
+            <h1>You can start chhhhhhattting!!! (only if you sign up)</h1>
+        {% endif %}
+
+
+
+    </div>
+</div>
+
+{% endblock %}
