@@ -1,11 +1,16 @@
-{% load static %}
+
+
 <!DOCTYPE html>
+
+{% load staticfiles %}
+
+
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
         <title></title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static base.css %}">
+        <link rel="stylesheet" href="{% static "base.css" %}">
     </head>
     <!-- <img src="https://i.redd.it/uhujqxgvjn521.jpg" alt=""> -->
     <body>
@@ -17,12 +22,12 @@
                     <ul class="nav navbar-nav">
                         <a class="navbar-brand"href="{% url 'index'%}">Chungus Chat</a>
                         <a class="navbar-link"href="{% url 'admin:index' %}">Admin</a>
-                        <a class="navbar-link"href="{% url 'basic_app:register' %}">Register</a>
+                        <a class="navbar-link"href="{% url 'chatterApp:register' %}">Register</a>
                         {% if user.is_authenticated %}
-                            <li><a class="navbar-link"href="{% url 'basic_app:logout' %}">Log Out</a></li>
-                            <li><a class="navbar-link"href="{% url 'basic_app:chat' %}">Chat Post</a></li>
+                            <li><a class="navbar-link"href="{% url 'chatterApp:logout' %}">Log Out</a></li>
+                            <li><a class="navbar-link"href="{% url 'chatterApp:chat' %}">Chat Post</a></li>
                         {% else %}
-                            <li><a class="navbar-link"href="{% url 'basic_app:user_login' %}">Log In</a></li>
+                            <li><a class="navbar-link"href="{% url 'chatterApp:user_login' %}">Log In</a></li>
                         {% endif %}
                     </ul>
                 </div>

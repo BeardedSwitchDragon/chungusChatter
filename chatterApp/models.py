@@ -7,7 +7,7 @@ class ChatterUser(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     profile_pic = models.ImageField(upload_to="profile_pics", blank=True)
-
+    username = models.CharField(max_length=30)
     def __str__(self):
         return self.user.username
 

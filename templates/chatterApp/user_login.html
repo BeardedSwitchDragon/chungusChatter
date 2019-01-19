@@ -1,14 +1,22 @@
 {% extends "chatterApp/base.html" %}
 {% block body_block %}
 
+
 <div class="jumbotron">
     <h1>login if you want toooooooo900oo000o0o0...</h1>
-    <form action="{% url 'basic_app:user_login' %}" method="post">
+    <form action="{% url 'chatterApp:user_login' %}" method="post">
         {% csrf_token %}
         <label for="">Username: </label>
         <input type="text" name="username" placeholder="username here... i am a placeholder, i go about unoticed :((((">
+        <br>
         <label for="password">Password:</label>
+        <input type="password" name="password" value="">
+        <br>
         <input type="submit" name="" value="login!!!">
+        <br>
+        {% if login_failed %}
+          <p id="error">your username or passworrrrd was wrooooooong -  i am too lazy to tell you which was wronnnnng</p>
+        {% endif %}
     </form>
 
 </div>

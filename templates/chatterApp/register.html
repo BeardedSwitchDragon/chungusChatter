@@ -10,11 +10,11 @@
         {% else %}
             <h1>register here or something...</h1>
             <h3>i dont reallly give a poopoo.</h3>
-            <form class="" action="index.html" method="post">
+            <form class="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ user_form.as_p }}
                 {{ profile_form.as_p }}
-                <input type="submit" name="" value="">
+                <input type="submit" name="" value="submmmmit">
             </form>
             {% endif %}
     </div>
