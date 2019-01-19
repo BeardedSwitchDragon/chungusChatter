@@ -10,7 +10,7 @@
         {% if user.is_authenticated %}
             <h2>Welcome to Chungus Chat, <b>{{ user.username }}</b></h2>
             <h1>You can start chhhhhhattting!!!</h1>
-            <img src="{{ profile_pic.url }}">
+            <img src="{{ MEDIA_URL }} {{ profile_pic.url }}">
         {% else %}
             <h1>You can start chhhhhhattting!!! (only if you sign up)</h1>
         {% endif %}
